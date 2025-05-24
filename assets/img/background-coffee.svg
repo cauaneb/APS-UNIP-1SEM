@@ -1,0 +1,28 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definição do gradiente de fundo -->
+  <defs>
+    <linearGradient id="grad-coffee" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6D4C41"></stop>   <!-- marrom médio -->
+      <stop offset="100%" stop-color="#3E2723"></stop> <!-- marrom escuro -->
+    </linearGradient>
+    <!-- Padrão de grãos de café -->
+    <pattern id="beans" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <g fill="#5D4037" opacity="0.3">
+        <!-- grão simples -->
+        <ellipse cx="20" cy="20" rx="8" ry="4" transform="rotate(-30 20 20)"></ellipse>
+        <ellipse cx="60" cy="60" rx="8" ry="4" transform="rotate(-30 60 60)"></ellipse>
+        <!-- grão invertido -->
+        <ellipse cx="20" cy="60" rx="8" ry="4" transform="rotate(30 20 60)"></ellipse>
+        <ellipse cx="60" cy="20" rx="8" ry="4" transform="rotate(30 60 20)"></ellipse>
+      </g>
+    </pattern>
+  </defs>
+
+  <!-- Retângulo de fundo com gradiente + padrão -->
+  <rect width="100%" height="100%" fill="url(#grad-coffee)"></rect>
+  <rect width="100%" height="100%" fill="url(#beans)"></rect>
+
+  <!-- Opcional: leve brilho no topo -->
+  <rect width="100%" height="100%" fill="url(#grad-coffee)" opacity="0.1"></rect>
+</svg>
